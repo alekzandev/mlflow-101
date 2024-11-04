@@ -27,3 +27,8 @@ docs:
 	pdoc src -o docs --force
 	@echo View API documentation... 
 	pdoc src --http localhost:8080
+
+clean-mlruns:
+	@echo "Cleaning mlruns..."
+	# Search for all directories named mlruns and delete them
+	find . -type d -name mlruns -exec rm -rf {} +
